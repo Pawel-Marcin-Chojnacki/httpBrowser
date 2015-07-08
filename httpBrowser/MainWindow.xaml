@@ -1,0 +1,87 @@
+﻿<Window x:Class="httpBrowser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Temat 15" 
+        Height="562" 
+        Width="1040" 
+        ResizeMode="CanMinimize"
+        Icon="download.ico">
+    <Grid 
+        Height="533" 
+        VerticalAlignment="Bottom">
+        <TextBox 
+            x:Name="SiteAdressTextBox" 
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="10,15,0,0" 
+            TextWrapping="Wrap" 
+            Text="http://www.etrapez.pl/" 
+            VerticalAlignment="Top" 
+            Width="312"/>
+        <Button 
+            x:Name="SendWebRequestButton" 
+            Content="Wyślij zapytanie" 
+            HorizontalAlignment="Left" 
+            Margin="10,43,0,0" 
+            VerticalAlignment="Top" 
+            Width="147" 
+            Click="WebRequest" 
+            Height="42" 
+            FontFamily="Lucida Sans Unicode" 
+            FontSize="16" 
+            FontWeight="Bold">
+        </Button>
+        <Button 
+            x:Name="DownloadAllButon"
+            Content="Pobierz wszystko" 
+            HorizontalAlignment="Left" 
+            Margin="162,43,0,0" 
+            VerticalAlignment="Top" 
+            Width="160" 
+            Click="DownThemAll" 
+            Height="42" 
+            FontSize="16" 
+            FontWeight="Bold" 
+            FontFamily="Lucida Sans Unicode"
+            IsEnabled="False">
+        </Button>
+        <ScrollViewer 
+            HorizontalAlignment="Left"  
+            Height="433" 
+            Margin="10,90,0,0" 
+            VerticalAlignment="Top"
+            Width="1010"
+            HorizontalScrollBarVisibility="Disabled" 
+            VerticalScrollBarVisibility="Visible"
+            RenderTransformOrigin="0.5,0.5">
+            <ScrollViewer.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform 
+                        AngleX="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform 
+                        X="0">
+                    </TranslateTransform>
+                </TransformGroup>
+            </ScrollViewer.RenderTransform>
+            <Grid 
+                x:Name="Photos" 
+                ShowGridLines="False" >
+            </Grid>
+        </ScrollViewer>
+        <TextBox 
+        		x:Name="InfoBoxLabel" 
+        		IsReadOnly="True" 
+        		FontFamily="Lucida Sans Unicode" 
+        		FontSize="10" 
+        		VerticalScrollBarVisibility="Auto" 
+        		HorizontalAlignment="Left" 
+        		Height="70" 
+        		TextWrapping="Wrap" 
+        		VerticalAlignment="Top" 
+        		Width="330" Margin="666,15,0,0">
+        </TextBox>
+
+    </Grid>
+</Window>
